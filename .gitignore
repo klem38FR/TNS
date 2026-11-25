@@ -1,0 +1,10 @@
+# Données cabinet et clients : ne jamais publier
+TNS_Param_Style_*.json
+TNS_*.json
+sauvegarde_cotisations_TNS_*.json
+parametres_cotisations_TNS_*.json
+*.pdf
+# Système
+.DS_Store
+Thumbs.db
+node_modules/

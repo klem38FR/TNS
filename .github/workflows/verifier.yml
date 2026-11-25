@@ -1,0 +1,14 @@
+name: Vérifications
+on:
+  push:
+  pull_request:
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Millésimes, service worker, absence de données cabinet / client
+        run: node tools/verifier.mjs

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'self' blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#3b5b7a">
+<meta name="description" content="Calcul et suivi des cotisations sociales des travailleurs non salariés (gérants majoritaires, exploitants individuels) — application locale.">
+<title>Cotisations TNS</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header>
+  <div class="brand" id="brand"><div><div class="t1">Cotisations TNS</div><div class="t2">Cotisations sociales des travailleurs indépendants</div></div></div>
+  <div class="grp">
+    <label>Dossier</label><select id="selDossier"></select>
+    <button class="sec sm" id="btnNewDossier">+ Nouveau</button>
+    <button class="sec sm" id="btnDelDossier">Supprimer</button>
+  </div>
+  <div class="grp">
+    <label>Exercice (année N)</label><select id="selExo"></select>
+    <button class="sec sm" id="btnPrevExo">+ Exercice N-1</button>
+    <button class="sec sm" id="btnNewExo">+ Exercice N+1</button>
+    <button class="sec sm" id="btnDelExo">Supprimer l'exercice</button>
+    <div id="vueBox" class="hide" style="flex-basis:100%;display:flex;gap:6px;align-items:center"></div>
+  </div>
+  <div class="grp">
+    <button class="sm" id="btnExport">Exporter sauvegarde</button>
+    <button class="sec sm" id="btnImport">Importer sauvegarde</button>
+    <button class="sm" id="btnPdf">Récapitulatif PDF</button>
+    <input type="file" id="fileImport" accept=".json,application/json" class="hide">
+    <input type="file" id="fileDoc" accept="application/pdf,.pdf" multiple class="hide">
+    <input type="file" id="fileStyle" accept=".json,application/json" class="hide">
+    <input type="file" id="fileLogo" accept="image/png,image/jpeg,image/webp" class="hide">
+  </div>
+  <div class="grp" id="milHeader"></div>
+</header>
+<nav id="tabs"></nav>
+<main id="main"><div class="card">Chargement…</div></main>
+<div id="printArea"></div>
+
+<!-- Noyau -->
+<script src="js/core/config.js"></script>
+<script src="js/core/utils.js"></script>
+<script src="js/data/schema-parametres.js"></script>
+<script src="js/data/referentiels.js"></script>
+<script src="js/core/millesimes.js"></script>
+<script src="js/core/store.js"></script>
+<!-- Moteur de calcul -->
+<script src="js/engine/calculs.js"></script>
+<script src="js/engine/compute.js"></script>
+<script src="js/engine/ecritures.js"></script>
+<!-- Interface -->
+<script src="js/ui/helpers.js"></script>
+<script src="js/ui/render.js"></script>
+<script src="js/tabs/dossier.js"></script>
+<script src="js/tabs/appel.js"></script>
+<script src="js/tabs/caisse.js"></script>
+<script src="js/tabs/revenus.js"></script>
+<script src="js/tabs/cotisations.js"></script>
+<script src="js/tabs/simulation.js"></script>
+<script src="js/tabs/impayes.js"></script>
+<script src="js/tabs/madelin.js"></script>
+<script src="js/tabs/cloture.js"></script>
+<script src="js/tabs/d2042.js"></script>
+<script src="js/tabs/historique.js"></script>
+<script src="js/tabs/millesime.js"></script>
+<!-- Fonctions -->
+<script src="js/features/documents.js"></script>
+<script src="js/features/style.js"></script>
+<script src="js/features/sauvegarde.js"></script>
+<script src="js/features/impression.js"></script>
+<script src="js/ui/bind.js"></script>
+<script src="js/ui/actions.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

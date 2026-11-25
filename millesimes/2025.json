@@ -1,0 +1,383 @@
+{
+  "annee": 2025,
+  "verifie": true,
+  "maj": "03/11/2026",
+  "origine": "Millésime 2025 : barème de la réforme de l'assiette (cotisations définitives 2025, régularisées en 2026). Le provisionnel appelé en 2025 relevait de l'ancien régime.",
+  "pass": 47100,
+  "smic_h": 11.88,
+  "duree_mens": 151.67,
+  "abatt": { "taux": 0.26, "minPct": 0.0176, "maxPct": 1.3 },
+  "arrondiTaux": 4,
+  "maladie": {
+    "bornes": [0.2, 0.4, 0.6, 1.1, 2, 3],
+    "taux": [0, 1.5, 4, 6.5, 7.7, 8.5],
+    "tauxSup": 6.5
+  },
+  "ij": { "taux": 0.005, "minPct": 0.4, "maxPct": 5 },
+  "af": { "seuil": 1.1, "haut": 1.4, "taux": 0.031 },
+  "rb": { "t1": 0.1787, "t2": 0.0072, "minHeures": 450 },
+  "rc": { "t1": 0.081, "plafT1": 1, "t2": 0.091, "plafT2": 4 },
+  "id": { "taux": 0.013, "minPct": 0.115 },
+  "csg": { "total": 0.097, "ded": 0.068, "nd": 0.029 },
+  "cfp": {
+    "commercant": 0.0025,
+    "artisan": 0.0029,
+    "pl_ssi": 0.0025,
+    "avocat": 0.0025,
+    "pl": 0.0025,
+    "conj_commercant": 0.0034,
+    "conj_artisan": null,
+    "conj_pl_ssi": 0.0034,
+    "conj_pl": 0.0034
+  },
+  "pl": {
+    "ij": { "taux": 0.003, "minPct": 0.4, "maxPct": 3 },
+    "curpsPlaf": 236,
+    "curps": { "carmf": 0.005, "carcdsf_cd": 0.003, "carcdsf_sf": 0.001, "carpimko": 0.001 },
+    "pamcSupp": 0.0325
+  },
+  "cnavpl": { "t1": 0.0823, "t2": 0.0187, "plafT2": 5, "minHeures": 450 },
+  "cipav": {
+    "rc": { "t1": 0.09, "plafT1": 1, "t2": 0.22, "plafT2": 4 },
+    "id": { "taux": 0.005, "plafPass": 1.85, "minPct": 0.37 }
+  },
+  "chqvac": { "pctSmicMens": 0.3 },
+  "acre": { "taux": 0.25, "seuilBas": 0.75, "seuilHaut": 1 },
+  "madelin": {
+    "prev": { "tauxBase": 0.0375, "tauxPass": 0.07, "plafMult": 8, "plafTaux": 0.03 },
+    "chom": { "taux": 0.01875, "plancherPass": 0.025, "plafMult": 8 },
+    "ret": { "taux1": 0.1, "taux2": 0.15, "plancherPass": 0.1, "plafMult": 8 }
+  },
+  "retard": { "initiale": 0.05, "mensuelle": 0.002 },
+  "trim": { "heures": 150, "max": 4 },
+  "cnbf": {
+    "ij_taux": 0.003,
+    "ij_plafPass": 3,
+    "rb_forf": [351, 705, 1106, 1505, 1505, 1921],
+    "rb_taux": 0.032,
+    "rb_plaf": 297549,
+    "debutPctPass": 0.19,
+    "dp_valeur": 573,
+    "dp_montant": 13,
+    "dp_plaf": 297549,
+    "id_debut": 68,
+    "id_plein": 170,
+    "id_retraite": null,
+    "id_barreau": 161,
+    "rc_bornes": [42507, 85014, 127521, 170028, 212535],
+    "rc_C1": [5.2, 10, 11.7, 13.4, 15.1],
+    "rc_C2": [6, 11.6, 13.7, 15.8, 17.9],
+    "rc_C2p": [6, 11.6, 13.7, 15.8, 20.4]
+  },
+  "caisses": {
+    "carmf": [
+      {
+        "k": "rcv",
+        "l": "Retraite complémentaire (RCV)",
+        "nat": "rc",
+        "t": "prop",
+        "taux": 0.102,
+        "plafPass": 3.5,
+        "ref": "N-2"
+      },
+      {
+        "k": "asv",
+        "l": "ASV – part forfaitaire + ajustement (part médecin)",
+        "nat": "rc",
+        "t": "prop",
+        "secteur": true,
+        "s1": { "forfait": 1852, "taux": 0.012667 },
+        "s2": { "forfait": 5556, "taux": 0.038 },
+        "plafPass": 5,
+        "ref": "N-2",
+        "conv": true
+      },
+      {
+        "k": "id",
+        "l": "Invalidité-décès",
+        "nat": "id",
+        "t": "prop",
+        "forfait": 434,
+        "taux": 0.004,
+        "plancherPass": 1,
+        "plafPass": 3,
+        "clampBas": true,
+        "ref": "N-2"
+      }
+    ],
+    "carpimko": [
+      {
+        "k": "rc",
+        "l": "Retraite complémentaire (forfait + proportionnelle)",
+        "nat": "rc",
+        "t": "prop",
+        "forfait": 2312,
+        "taux": 0.03,
+        "plancher": 25246,
+        "plafond": 237179,
+        "tranche": true,
+        "ref": "N-1"
+      },
+      {
+        "k": "asv",
+        "l": "ASV – part praticien (forfait + proportionnelle)",
+        "nat": "rc",
+        "t": "prop",
+        "forfait": 221,
+        "taux": 0.0016,
+        "ref": "N-2",
+        "conv": true
+      },
+      { "k": "id", "l": "Invalidité-décès", "nat": "id", "t": "forfait", "montant": 1022 }
+    ],
+    "carcdsf_cd": [
+      {
+        "k": "rc",
+        "l": "Retraite complémentaire (forfait + proportionnelle)",
+        "nat": "rc",
+        "t": "prop",
+        "forfait": 3178.8,
+        "taux": 0.108,
+        "plancherPass": 0.85,
+        "plafPass": 5,
+        "tranche": true,
+        "ref": "N-1"
+      },
+      {
+        "k": "pcv",
+        "l": "PCV – part praticien (forfait + 0,725 %)",
+        "nat": "rc",
+        "t": "prop",
+        "forfait": 1648.76,
+        "taux": 0.00725,
+        "plafPass": 5,
+        "ref": "N-1",
+        "conv": true
+      },
+      { "k": "id", "l": "Invalidité-décès + indemnités journalières", "nat": "id", "t": "forfait", "montant": 1284.4 }
+    ],
+    "carcdsf_sf": [
+      {
+        "k": "rc",
+        "l": "Retraite complémentaire (forfait + proportionnelle)",
+        "nat": "rc",
+        "t": "prop",
+        "forfait": 3178.8,
+        "taux": 0.108,
+        "plancherPass": 0.85,
+        "plafPass": 5,
+        "tranche": true,
+        "ref": "N-1"
+      },
+      { "k": "pcv", "l": "PCV – part praticien", "nat": "rc", "t": "forfait", "montant": 260 },
+      { "k": "id", "l": "Invalidité-décès", "nat": "id", "t": "forfait", "montant": 380 }
+    ],
+    "carpv": [
+      {
+        "k": "rc",
+        "l": "Retraite complémentaire (classe selon revenu)",
+        "nat": "rc",
+        "t": "classes",
+        "ref": "N-1",
+        "classes": [
+          ["B", 76364, 9461.76],
+          ["C", 101820, 11827.2],
+          ["D", null, 14192.64]
+        ],
+        "allegement": [
+          ["Super spéciale I", 16969, 1182.72],
+          ["Super spéciale II", 25454, 1774.08],
+          ["Spéciale I", 33939, 2365.44],
+          ["Spéciale II", 47515, 4730.88],
+          ["A", 50909, 7096.32]
+        ]
+      },
+      {
+        "k": "id",
+        "l": "Invalidité-décès (classe choisie)",
+        "nat": "id",
+        "t": "choix",
+        "choix": {
+          "min": ["Minimum", 390],
+          "med": ["Médium", 780],
+          "max": ["Maximum", 1170],
+          "spec_med": ["Médium – tarif spécial jeune", 647.4],
+          "spec_max": ["Maximum – tarif spécial jeune", 780]
+        },
+        "defaut": "min"
+      }
+    ],
+    "cavec": [
+      {
+        "k": "rc",
+        "l": "Retraite complémentaire (classe selon revenu)",
+        "nat": "rc",
+        "t": "classes",
+        "ref": "N-1",
+        "classes": [
+          ["A", 16190, 785],
+          ["B", 32350, 2934],
+          ["C", 44790, 4629],
+          ["D", 64560, 7237],
+          ["E", 79040, 11540],
+          ["F", 94850, 17604],
+          ["G", 132780, 19560],
+          ["H", null, 24450]
+        ]
+      },
+      {
+        "k": "id",
+        "l": "Invalidité-décès (classe selon revenu)",
+        "nat": "id",
+        "t": "classes",
+        "ref": "N-1",
+        "classes": [
+          ["1", 16190, 288],
+          ["2", 44790, 396],
+          ["3", 79040, 612],
+          ["4", null, 828]
+        ]
+      }
+    ],
+    "cavp_ph": [
+      {
+        "k": "rc",
+        "l": "Retraite complémentaire (répartition + capitalisation)",
+        "nat": "rc",
+        "t": "classes",
+        "ref": "N-2",
+        "classes": []
+      },
+      { "k": "id", "l": "Invalidité-décès", "nat": "id", "t": "forfait", "montant": null }
+    ],
+    "cavp_bio": [
+      {
+        "k": "rc",
+        "l": "Retraite complémentaire (répartition + capitalisation)",
+        "nat": "rc",
+        "t": "classes",
+        "ref": "N-2",
+        "classes": []
+      },
+      {
+        "k": "pcv",
+        "l": "PCV biologiste conventionné – part praticien",
+        "nat": "rc",
+        "t": "prop",
+        "forfait": null,
+        "taux": null,
+        "plafPass": 5,
+        "ref": "N-1",
+        "conv": true
+      },
+      { "k": "id", "l": "Invalidité-décès", "nat": "id", "t": "forfait", "montant": null }
+    ],
+    "crn": [
+      {
+        "k": "secB",
+        "l": "Section B (forfaitaire, classe 1 à 8)",
+        "nat": "rc",
+        "t": "multiple",
+        "unite": null,
+        "max": 8,
+        "defaut": 1
+      },
+      {
+        "k": "secC",
+        "l": "Section C (proportionnelle à la moyenne triennale des produits)",
+        "nat": "rc",
+        "t": "prop",
+        "taux": null,
+        "ref": "produits"
+      },
+      { "k": "id", "l": "Invalidité-décès", "nat": "id", "t": "forfait", "montant": null }
+    ],
+    "cavamac": [
+      {
+        "k": "rco",
+        "l": "Retraite complémentaire (commissions brutes N-1)",
+        "nat": "rc",
+        "t": "prop",
+        "taux": 0.0766,
+        "plafond": 601709,
+        "ref": "commissions"
+      },
+      {
+        "k": "rid",
+        "l": "Invalidité-décès (commissions brutes N-1)",
+        "nat": "id",
+        "t": "prop",
+        "taux": 0.007,
+        "plafond": 601709,
+        "ref": "commissions"
+      }
+    ],
+    "cavom": [
+      {
+        "k": "rc",
+        "l": "Retraite complémentaire (libéral)",
+        "nat": "rc",
+        "t": "prop",
+        "taux": 0.125,
+        "plafPass": 8,
+        "minPass": 0.19,
+        "ref": "N-1"
+      },
+      {
+        "k": "id",
+        "l": "Invalidité-décès (classe choisie)",
+        "nat": "id",
+        "t": "choix",
+        "choix": {
+          "A": ["Classe A", 315],
+          "B": ["Classe B", 630],
+          "C": ["Classe C", 1260],
+          "D": ["Classe D", 1890]
+        },
+        "defaut": "A"
+      }
+    ]
+  },
+  "msa": {
+    "amexa": {
+      "bornes": [0.4, 0.6, 1.1],
+      "taux": [0, 4, 6.5],
+      "tauxSup": 6.5
+    },
+    "ijForfait": 250,
+    "inval": { "taux": 0.011, "minPct": 0.115 },
+    "avi": { "taux": 0.0332, "plafPass": 1, "minSmic": 800 },
+    "avaP": { "taux": 0.1155, "plafPass": 1, "minSmic": 600 },
+    "avaD": { "taux": 0.0224, "minSmic": 600 },
+    "rco": { "taux": 0.04, "minSmic": 1820 },
+    "atexa": { "A": 528.2, "B": 551.04, "C": 515.55, "D": 560.38, "E": 560.38 },
+    "vivea": { "taux": 0.0061, "minPct": 0.0017, "maxPct": 0.0089 },
+    "csg": { "total": 0.097, "ded": 0.068 }
+  },
+  "sources": [
+    "PASS 2025 = 47 100 € ; minimum retraite de base 450 h SMIC = 5 346 € (⇒ SMIC horaire 11,88 €) ; CFP 2025 commerçant 0,25 %, artisan 0,29 %, avec conjoint 0,34 % : Weblex, tableau des cotisations des travailleurs indépendants 2025 — https://www.weblex.fr/chiffres-cles/tableau-des-cotisations-sociales-dues-par-les-travailleurs-independants-annee-2025",
+    "Réforme de l'assiette applicable à la régularisation des cotisations 2025 (effectuée en 2026) : retraite de base 17,87 % / 0,72 %, barème maladie progressif, RCI 8,1 % / 9,1 % (4 PASS), IJ 0,5 % (40 % à 5 PASS), abattement 26 % (1,76 %–130 % PASS) : CAPEB, circulaire C24-13 — https://www.capeb.fr/www/capeb/media//herault/document/REFORME_ASSIETTE_TNS.pdf ; Weblex 2026 : « la réforme … s'applique à compter de la régularisation des cotisations dues au titre de 2025 ».",
+    "Provisionnel 2025 (appelé en 2025, ancien régime, pour mémoire) : maladie 0 % à 6,70 % + IJ 0,50 %, retraite de base 17,75 % / 0,60 %, invalidité-décès 1,3 % — Weblex 2025 (lien ci-dessus).",
+    "CNAVPL 2025 : 8,23 % jusqu'à 1 PASS + 1,87 % jusqu'à 5 PASS, minimum 540 € ; la CARMF indique que la régularisation 2025 est calculée à 8,23 %, une correction à 8,73 % étant annoncée au 1er trimestre 2027 — https://www.carmf.fr/page.php?page=chiffrescles%2Fstats%2F2026%2Ftaux2026.htm ; CARPV, livret 2025 — https://www.carpv.fr/wp-content/uploads/2026/03/Livret-2025_Version-janvier-V3.pdf",
+    "Cipav 2025 : complémentaire 9 % jusqu'à 1 PASS + 22 % de 1 à 4 PASS (188 400 €), invalidité-décès 0,50 % jusqu'à 1,85 PASS — Weblex, tableau architectes… 2025.",
+    "CARMF 2025 : RCV 10,20 % (revenus N-2, 3,5 PASS) ; ASV secteur 1 : 1 852 € + 1,2667 % (secteur 2 : 5 556 € + 3,80 %) ; ID 434 € + 0,40 % — https://www.carmf.fr/page.php?page=chiffrescles%2Fstats%2F2025%2Ftaux2025.htm",
+    "CARPIMKO 2025 : complémentaire 2 312 € + 3 % entre 25 246 € et 237 179 € ; ASV praticien 221 € + 0,16 % (revenus conventionnés N-2) ; ID 1 022 € — https://www.carpimko.com/Portals/0/BulletinSpecialAssietteSocialeAvril2026.pdf",
+    "CARCDSF 2025 : complémentaire 3 178,80 € + 10,80 % entre 0,85 et 5 PASS (revenus 2024) ; PCV dentiste 1 648,76 € + 0,725 % ; ID dentiste 1 284,40 €, sage-femme 380 € — https://www.carcdsf.fr/images/pdf/2025/Memento_CD_WEB.pdf ; https://www.carcdsf.fr/images/pdf/2025/Memento_SF_WEB.pdf",
+    "CARPV 2025 : classes B à D (9 461,76 € à 14 192,64 €) et allègement — livret 2025 (lien ci-dessus).",
+    "CAVEC 2025 : classes A à H et invalidité-décès classes 1 à 4 — Weblex, tableau experts-comptables 2025 — https://www.weblex.fr/chiffres-cles/tableau-des-cotisations-sociales-dues-par-les-experts-comptables-et-comptables-agrees-annee-2025",
+    "CAVAMAC 2025 : RCO 7,66 % et RID 0,70 % des commissions (plafond 601 709 €) ; CAVOM 2025 : complémentaire 12,50 % (8 PASS, minimum 1 119 €), ID classes A à D — Weblex, tableaux 2025.",
+    "CNBF : barème 2025 du 20/02/2025 — https://www.cnbf.fr/wp-content/uploads/2025/02/Bareme-CNBF-2025-01.01_vDf-1.pdf",
+    "MSA 2025 : Weblex — https://www.weblex.fr/chiffres-cles/tableau-des-cotisations-sociales-dues-par-les-travailleurs-non-salaries-agricoles-annee-2025"
+  ],
+  "aVerifier": [
+    "Le provisionnel 2025 relevait de l'ancien régime d'assiette : il n'est pas recalculé par l'outil (saisie depuis le courrier 2025).",
+    "Allocations familiales, invalidité-décès, CSG-CRDS 2025 : mêmes règles qu'en 2026 supposées.",
+    "CNAVPL 2025 : 8,23 % retenu (régularisation 2025 calculée à 8,23 % selon la CARMF ; correction à 8,73 % annoncée pour 2027 ; la CAVP indique 8,73 % « à compter de 2025 »).",
+    "CAVP 2025 et CPRN 2025 : barèmes non trouvés — champs vides, à compléter dans les paramètres.",
+    "CAVEC 2025 : la source Weblex indique un barème sur revenus 2022 et un montant de classe A de 785 € ; la CAVEC (article 2026) cite des revenus 2024 et 782 €. Valeurs Weblex retenues, revenu N-1 retenu.",
+    "CARPIMKO 2025 : année de revenu de la complémentaire (N-1 selon le bulletin CARPIMKO d'avril 2026).",
+    "ACRE 2025 : régime antérieur à la LFSS 2026 non modélisé — la règle 2026 est appliquée.",
+    "MSA 2025 : barème AMEXA à 3 tranches (40 %, 60 %, 110 % PASS) repris de Weblex."
+  ],
+  "provAncienRegime": true
+}
